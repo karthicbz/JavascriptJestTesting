@@ -1,11 +1,10 @@
 const reverseString = (text)=>{
-    let i = text.length-1;
-    let reversedString = ''
-    while(i>=0){
-        reversedString += text[i];
-        i--;
-    }
+    let reversedString = Array.from(text).reduce((start, t)=>{
+        return t+start;
+    }, '');
     return reversedString;
 }
+
+// reverseString('karthick');
 
 export {reverseString};
