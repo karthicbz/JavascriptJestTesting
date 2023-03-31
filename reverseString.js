@@ -1,10 +1,14 @@
 const reverseString = (text)=>{
-    let reversedString = Array.from(text).reduce((start, t)=>{
-        return t+start;
-    }, '');
-    return reversedString;
+    if(typeof text === 'string'){
+        let reversedString = Array.from(text).reduce((start, t)=>{
+            return t+start;
+        }, '');
+        return reversedString;
+    }else{
+        return 'not a string';
+    }
 }
 
-// reverseString('karthick');
+// reverseString(12345);
 
 export {reverseString};
